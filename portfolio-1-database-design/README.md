@@ -1,4 +1,4 @@
-# Portfolio 1 — Database Design and Modelling
+# Portfolio 1 - Database Design and Modelling
 
 **Case study:** CampusMart  
 **Marks:** 7  
