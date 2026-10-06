@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+<rect width="1200" height="1000" fill="white"/>
+<text x="70" y="60" fill="#102D45" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="bold">CampusMart | relational model</text>
+<text x="70" y="96" fill="#526575" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal">PORTFOLIO 1  /  Five tables  /  PostgreSQL</text>
+<polyline points="265,297 265,405" fill="none" stroke="#127C80" stroke-width="3"/>
+<text x="282" y="320" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">1</text>
+<text x="282" y="389" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">0..*</text>
+<polyline points="905,265 905,405" fill="none" stroke="#127C80" stroke-width="3"/>
+<text x="922" y="291" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">1</text>
+<text x="922" y="389" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">0..*</text>
+<polyline points="265,621 265,701 460,701 460,755" fill="none" stroke="#127C80" stroke-width="3"/>
+<text x="282" y="646" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">1</text>
+<text x="476" y="744" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">0..*</text>
+<polyline points="905,653 905,717 740,717 740,755" fill="none" stroke="#127C80" stroke-width="3"/>
+<text x="922" y="678" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">1</text>
+<text x="755" y="744" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="bold">0..*</text>
+<rect x="90" y="145" width="350" height="152" rx="5" fill="#FFFFFF" stroke="#D4E0E6"/>
+<rect x="90" y="145" width="350" height="44" rx="5" fill="#102D45" stroke="#102D45"/>
+<text x="107" y="175" fill="#FFFFFF" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold">customers</text>
+<text x="104" y="217" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK</text>
+<text x="168" y="217" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">customer_id : bigint</text>
+<text x="168" y="249" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">full_name : varchar(100)</text>
+<text x="104" y="281" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">UQ</text>
+<text x="168" y="281" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">email : varchar(254)</text>
+<rect x="730" y="145" width="350" height="120" rx="5" fill="#FFFFFF" stroke="#D4E0E6"/>
+<rect x="730" y="145" width="350" height="44" rx="5" fill="#102D45" stroke="#102D45"/>
+<text x="747" y="175" fill="#FFFFFF" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold">categories</text>
+<text x="744" y="217" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK</text>
+<text x="808" y="217" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">category_id : bigint</text>
+<text x="744" y="249" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">UQ</text>
+<text x="808" y="249" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">category_name : varchar(80)</text>
+<rect x="90" y="405" width="350" height="216" rx="5" fill="#FFFFFF" stroke="#D4E0E6"/>
+<rect x="90" y="405" width="350" height="44" rx="5" fill="#102D45" stroke="#102D45"/>
+<text x="107" y="435" fill="#FFFFFF" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold">orders</text>
+<text x="104" y="477" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK</text>
+<text x="168" y="477" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">order_id : bigint</text>
+<text x="104" y="509" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">FK</text>
+<text x="168" y="509" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">customer_id : bigint</text>
+<text x="104" y="541" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">UQ</text>
+<text x="168" y="541" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">order_reference : varchar(20)</text>
+<text x="168" y="573" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">order_date : timestamptz</text>
+<text x="168" y="605" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">status : varchar(15)</text>
+<rect x="730" y="405" width="350" height="248" rx="5" fill="#FFFFFF" stroke="#D4E0E6"/>
+<rect x="730" y="405" width="350" height="44" rx="5" fill="#102D45" stroke="#102D45"/>
+<text x="747" y="435" fill="#FFFFFF" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold">products</text>
+<text x="744" y="477" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK</text>
+<text x="808" y="477" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">product_id : bigint</text>
+<text x="744" y="509" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">FK</text>
+<text x="808" y="509" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">category_id : bigint</text>
+<text x="744" y="541" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">UQ</text>
+<text x="808" y="541" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">sku : varchar(20)</text>
+<text x="808" y="573" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">product_name : varchar(120)</text>
+<text x="808" y="605" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">price : numeric(12,2)</text>
+<text x="808" y="637" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">stock_quantity : integer</text>
+<rect x="410" y="755" width="380" height="184" rx="5" fill="#FFFFFF" stroke="#D4E0E6"/>
+<rect x="410" y="755" width="380" height="44" rx="5" fill="#102D45" stroke="#102D45"/>
+<text x="427" y="785" fill="#FFFFFF" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold">order_items</text>
+<text x="424" y="827" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK,FK</text>
+<text x="488" y="827" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">order_id : bigint</text>
+<text x="424" y="859" fill="#127C80" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="bold">PK,FK</text>
+<text x="488" y="859" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">product_id : bigint</text>
+<text x="488" y="891" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">quantity : integer</text>
+<text x="488" y="923" fill="#213747" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal">unit_price : numeric(12,2)</text>
+<text x="70" y="975" fill="#526575" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal">PK = primary key    FK = foreign key    UQ = unique key    0..* = zero or many</text>
+</svg>
