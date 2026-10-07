@@ -1,0 +1,452 @@
+{
+  "validation_source": "Assistant-run PGlite embedded PostgreSQL; not the student Windows server",
+  "run_at": "2026-10-06T20:08:17.987Z",
+  "version": "PostgreSQL 18.3 (PGlite 0.5.8) on wasm32-unknown-emscripten, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+  "schema": "PASS",
+  "seed": "PASS",
+  "row_counts": [
+    {
+      "table_name": "categories",
+      "actual_rows": 4,
+      "expected_rows": 4,
+      "result": "PASS"
+    },
+    {
+      "table_name": "customers",
+      "actual_rows": 6,
+      "expected_rows": 6,
+      "result": "PASS"
+    },
+    {
+      "table_name": "order_items",
+      "actual_rows": 16,
+      "expected_rows": 16,
+      "result": "PASS"
+    },
+    {
+      "table_name": "orders",
+      "actual_rows": 8,
+      "expected_rows": 8,
+      "result": "PASS"
+    },
+    {
+      "table_name": "products",
+      "actual_rows": 10,
+      "expected_rows": 10,
+      "result": "PASS"
+    }
+  ],
+  "order_totals": [
+    {
+      "order_reference": "CM-1001",
+      "full_name": "Amina Yusuf",
+      "status": "completed",
+      "order_value_ngn": "467000.00"
+    },
+    {
+      "order_reference": "CM-1002",
+      "full_name": "Tunde Bello",
+      "status": "completed",
+      "order_value_ngn": "24000.00"
+    },
+    {
+      "order_reference": "CM-1003",
+      "full_name": "Chidinma Okeke",
+      "status": "completed",
+      "order_value_ngn": "27000.00"
+    },
+    {
+      "order_reference": "CM-1004",
+      "full_name": "Emeka Obi",
+      "status": "completed",
+      "order_value_ngn": "28500.00"
+    },
+    {
+      "order_reference": "CM-1005",
+      "full_name": "Amina Yusuf",
+      "status": "completed",
+      "order_value_ngn": "34000.00"
+    },
+    {
+      "order_reference": "CM-1006",
+      "full_name": "Zainab Musa",
+      "status": "placed",
+      "order_value_ngn": "19500.00"
+    },
+    {
+      "order_reference": "CM-1007",
+      "full_name": "Tunde Bello",
+      "status": "draft",
+      "order_value_ngn": "24000.00"
+    },
+    {
+      "order_reference": "CM-1008",
+      "full_name": "Chidinma Okeke",
+      "status": "cancelled",
+      "order_value_ngn": "15000.00"
+    }
+  ],
+  "historical_price": [
+    {
+      "order_reference": "CM-1005",
+      "sku": "BK001",
+      "product_name": "Database Systems Textbook",
+      "current_price_ngn": "18000.00",
+      "charged_price_ngn": "16000.00"
+    }
+  ],
+  "placed_orders_missing_items": [],
+  "implemented_constraints": [
+    {
+      "table_name": "categories",
+      "constraint_name": "categories_category_id_not_null",
+      "definition": "NOT NULL category_id"
+    },
+    {
+      "table_name": "categories",
+      "constraint_name": "categories_category_name_not_null",
+      "definition": "NOT NULL category_name"
+    },
+    {
+      "table_name": "categories",
+      "constraint_name": "ck_categories_name",
+      "definition": "CHECK ((btrim((category_name)::text) <> ''::text))"
+    },
+    {
+      "table_name": "categories",
+      "constraint_name": "pk_categories",
+      "definition": "PRIMARY KEY (category_id)"
+    },
+    {
+      "table_name": "categories",
+      "constraint_name": "uq_categories_name",
+      "definition": "UNIQUE (category_name)"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "ck_customers_email",
+      "definition": "CHECK ((((email)::text = lower(btrim((email)::text))) AND (POSITION(('@'::text) IN (email)) > 1)))"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "ck_customers_name",
+      "definition": "CHECK ((btrim((full_name)::text) <> ''::text))"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "customers_customer_id_not_null",
+      "definition": "NOT NULL customer_id"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "customers_email_not_null",
+      "definition": "NOT NULL email"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "customers_full_name_not_null",
+      "definition": "NOT NULL full_name"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "pk_customers",
+      "definition": "PRIMARY KEY (customer_id)"
+    },
+    {
+      "table_name": "customers",
+      "constraint_name": "uq_customers_email",
+      "definition": "UNIQUE (email)"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "ck_order_items_price",
+      "definition": "CHECK (((unit_price >= (0)::numeric) AND (unit_price <> 'NaN'::numeric)))"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "ck_order_items_quantity",
+      "definition": "CHECK ((quantity > 0))"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "fk_order_items_order",
+      "definition": "FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "fk_order_items_product",
+      "definition": "FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "order_items_order_id_not_null",
+      "definition": "NOT NULL order_id"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "order_items_product_id_not_null",
+      "definition": "NOT NULL product_id"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "order_items_quantity_not_null",
+      "definition": "NOT NULL quantity"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "order_items_unit_price_not_null",
+      "definition": "NOT NULL unit_price"
+    },
+    {
+      "table_name": "order_items",
+      "constraint_name": "pk_order_items",
+      "definition": "PRIMARY KEY (order_id, product_id)"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "ck_orders_reference",
+      "definition": "CHECK ((btrim((order_reference)::text) <> ''::text))"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "ck_orders_status",
+      "definition": "CHECK (((status)::text = ANY ((ARRAY['draft'::character varying, 'placed'::character varying, 'completed'::character varying, 'cancelled'::character varying])::text[])))"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "fk_orders_customer",
+      "definition": "FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "orders_customer_id_not_null",
+      "definition": "NOT NULL customer_id"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "orders_order_date_not_null",
+      "definition": "NOT NULL order_date"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "orders_order_id_not_null",
+      "definition": "NOT NULL order_id"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "orders_order_reference_not_null",
+      "definition": "NOT NULL order_reference"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "orders_status_not_null",
+      "definition": "NOT NULL status"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "pk_orders",
+      "definition": "PRIMARY KEY (order_id)"
+    },
+    {
+      "table_name": "orders",
+      "constraint_name": "uq_orders_reference",
+      "definition": "UNIQUE (order_reference)"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "ck_products_name",
+      "definition": "CHECK ((btrim((product_name)::text) <> ''::text))"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "ck_products_price",
+      "definition": "CHECK (((price >= (0)::numeric) AND (price <> 'NaN'::numeric)))"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "ck_products_sku",
+      "definition": "CHECK ((btrim((sku)::text) <> ''::text))"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "ck_products_stock",
+      "definition": "CHECK ((stock_quantity >= 0))"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "fk_products_category",
+      "definition": "FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "pk_products",
+      "definition": "PRIMARY KEY (product_id)"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_category_id_not_null",
+      "definition": "NOT NULL category_id"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_price_not_null",
+      "definition": "NOT NULL price"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_product_id_not_null",
+      "definition": "NOT NULL product_id"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_product_name_not_null",
+      "definition": "NOT NULL product_name"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_sku_not_null",
+      "definition": "NOT NULL sku"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "products_stock_quantity_not_null",
+      "definition": "NOT NULL stock_quantity"
+    },
+    {
+      "table_name": "products",
+      "constraint_name": "uq_products_sku",
+      "definition": "UNIQUE (sku)"
+    }
+  ],
+  "constraint_checks": [
+    {
+      "test_no": 1,
+      "test_name": "Duplicate customer email",
+      "result": "PASS",
+      "expected_sqlstate": "23505",
+      "actual_sqlstate": "23505",
+      "detail": "duplicate key value violates unique constraint \"uq_customers_email\""
+    },
+    {
+      "test_no": 2,
+      "test_name": "Unknown customer on an order",
+      "result": "PASS",
+      "expected_sqlstate": "23503",
+      "actual_sqlstate": "23503",
+      "detail": "insert or update on table \"orders\" violates foreign key constraint \"fk_orders_customer\""
+    },
+    {
+      "test_no": 3,
+      "test_name": "Negative product stock",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"products\" violates check constraint \"ck_products_stock\""
+    },
+    {
+      "test_no": 4,
+      "test_name": "Zero order-item quantity",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"order_items\" violates check constraint \"ck_order_items_quantity\""
+    },
+    {
+      "test_no": 5,
+      "test_name": "Negative current price",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"products\" violates check constraint \"ck_products_price\""
+    },
+    {
+      "test_no": 6,
+      "test_name": "Missing customer name",
+      "result": "PASS",
+      "expected_sqlstate": "23502",
+      "actual_sqlstate": "23502",
+      "detail": "null value in column \"full_name\" of relation \"customers\" violates not-null constraint"
+    },
+    {
+      "test_no": 7,
+      "test_name": "Duplicate product line in one order",
+      "result": "PASS",
+      "expected_sqlstate": "23505",
+      "actual_sqlstate": "23505",
+      "detail": "duplicate key value violates unique constraint \"pk_order_items\""
+    },
+    {
+      "test_no": 8,
+      "test_name": "Unknown product category",
+      "result": "PASS",
+      "expected_sqlstate": "23503",
+      "actual_sqlstate": "23503",
+      "detail": "insert or update on table \"products\" violates foreign key constraint \"fk_products_category\""
+    },
+    {
+      "test_no": 9,
+      "test_name": "Delete customer with historical orders",
+      "result": "PASS",
+      "expected_sqlstate": "23001|23503",
+      "actual_sqlstate": "23001",
+      "detail": "update or delete on table \"customers\" violates RESTRICT setting of foreign key constraint \"fk_orders_customer\" on table \"orders\""
+    },
+    {
+      "test_no": 10,
+      "test_name": "Invalid order status",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"orders\" violates check constraint \"ck_orders_status\""
+    },
+    {
+      "test_no": 11,
+      "test_name": "Negative charged price",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"order_items\" violates check constraint \"ck_order_items_price\""
+    },
+    {
+      "test_no": 12,
+      "test_name": "Blank product name",
+      "result": "PASS",
+      "expected_sqlstate": "23514",
+      "actual_sqlstate": "23514",
+      "detail": "new row for relation \"products\" violates check constraint \"ck_products_name\""
+    }
+  ],
+  "counts_after_checks": [
+    {
+      "table_name": "categories",
+      "actual_rows": 4,
+      "expected_rows": 4,
+      "result": "PASS"
+    },
+    {
+      "table_name": "customers",
+      "actual_rows": 6,
+      "expected_rows": 6,
+      "result": "PASS"
+    },
+    {
+      "table_name": "order_items",
+      "actual_rows": 16,
+      "expected_rows": 16,
+      "result": "PASS"
+    },
+    {
+      "table_name": "orders",
+      "actual_rows": 8,
+      "expected_rows": 8,
+      "result": "PASS"
+    },
+    {
+      "table_name": "products",
+      "actual_rows": 10,
+      "expected_rows": 10,
+      "result": "PASS"
+    }
+  ],
+  "repeat_seed_guard": "PASS"
+}

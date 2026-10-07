@@ -1,0 +1,9 @@
+order_reference,full_name,status,order_value_ngn
+CM-1001,Amina Yusuf,completed,467000.00
+CM-1002,Tunde Bello,completed,24000.00
+CM-1003,Chidinma Okeke,completed,27000.00
+CM-1004,Emeka Obi,completed,28500.00
+CM-1005,Amina Yusuf,completed,34000.00
+CM-1006,Zainab Musa,placed,19500.00
+CM-1007,Tunde Bello,draft,24000.00
+CM-1008,Chidinma Okeke,cancelled,15000.00
