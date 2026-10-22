@@ -1,35 +1,21 @@
-# Portfolio 1 — Recorded validation evidence
+# Portfolio 1 Execution Evidence
 
-**Executed:** 2026-10-06T20:08:17.987Z  
-**Environment:** embedded PostgreSQL 18.3 through PGlite 0.5.8  
-**Source:** actual assistant-run execution of the four supplied SQL scripts
+## Desktop execution
 
-These outputs were recorded by executing the submitted SQL. They are not sample
-values, a mock pgAdmin screen or a claim about the student's desktop run.
+The [seven pgAdmin screenshots](screenshots/README.md) document my execution on `campusmart_portfolio`. The server-version query reports PostgreSQL 18.6.
 
-| Evidence | Content |
+The row-count queries show 4 categories, 6 customers, 10 products, 8 orders and 16 order items both before and after the checks. All 12 constraint tests show PASS. The order-value and price screenshots show that historical amounts use the charged unit price.
+
+## Supplementary validation
+
+The following files retain the earlier automated validation from 6 October 2026 in PGlite 0.5.8, reporting embedded PostgreSQL 18.3. They are supplementary results from a separate environment; the screenshots above are the evidence of my desktop execution.
+
+| File | Recorded content |
 |---|---|
-| [validation-results.json](validation-results.json) | Full run metadata, results, constraints and actual error messages |
-| [execution-log.txt](execution-log.txt) | Captured console output from this validation run |
-| [row-counts.csv](row-counts.csv) | Five actual versus expected counts |
-| [order-values.csv](order-values.csv) | Eight calculated order values and statuses |
-| [constraint-checks.csv](constraint-checks.csv) | Twelve invalid-operation checks and rejection details |
-| [screenshots/](screenshots/README.md) | Student's own database screenshots: awaiting upload |
+| [validation-results.json](validation-results.json) | Engine metadata, results and error messages |
+| [execution-log.txt](execution-log.txt) | Captured output from the automated validation |
+| [row-counts.csv](row-counts.csv) | Five actual and expected counts |
+| [order-values.csv](order-values.csv) | Eight order values and statuses |
+| [constraint-checks.csv](constraint-checks.csv) | Twelve constraint-test results |
 
-## Results
-
-- Schema creation and sample-data insertion succeeded.
-- All five row-count comparisons passed.
-- All eight order values matched the expected calculations.
-- For CM-1005 / BK001, charged price remained 16000.00 while current price was 18000.00.
-- No seeded placed/completed order lacked items.
-- All twelve invalid operations were rejected for their intended reasons.
-- Permanent row counts stayed unchanged after the test transaction rolled back.
-- A second seed-data load was rejected as intended.
-
-## Reproduce
-
-Run the four numbered SQL files on a fresh PostgreSQL database as described in
-[Portfolio 1](../../portfolio-1-database-design/README.md). Save Query Tool result
-exports and screenshots. The test engine here has one connection and this stage
-does not claim to verify multi-user concurrency or the student's installation.
+The automated run also checked the repeated-seed guard and absence of empty placed or completed orders. Those additional checks are not separately demonstrated by the seven desktop screenshots.
