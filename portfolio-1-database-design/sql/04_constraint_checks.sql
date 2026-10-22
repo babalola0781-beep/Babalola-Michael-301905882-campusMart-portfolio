@@ -1,4 +1,4 @@
--- Run the WHOLE file after 01 and 02. Expected output: 12 PASS rows.
+-- Twelve integrity tests against the CampusMart seed dataset.
 -- Each invalid operation runs in an exception block (a subtransaction).
 -- Expected errors are caught; any unexpectedly successful operation is undone.
 -- ROLLBACK at the end leaves permanent table data unchanged.
@@ -19,7 +19,7 @@ DECLARE
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM public.orders WHERE order_reference = 'CM-1001')
        OR NOT EXISTS (SELECT 1 FROM public.products WHERE sku = 'EL001') THEN
-        RAISE EXCEPTION 'Run 02_seed_data.sql before the constraint checks.';
+        RAISE EXCEPTION 'Constraint checks require the CampusMart seed dataset.';
     END IF;
 
     FOR t IN SELECT * FROM (VALUES

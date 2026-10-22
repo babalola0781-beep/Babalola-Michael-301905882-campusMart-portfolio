@@ -1,7 +1,7 @@
--- Read-only checks. Run each numbered SELECT separately to view/capture its grid.
+-- Read-only verification queries for the CampusMart seed dataset.
 -- These expected results apply immediately after the supplied seed script.
 
--- CHECK 1: five rows, all PASS. This is the first screenshot to capture.
+-- CHECK 1: actual and expected row counts.
 WITH actual AS (
     SELECT 'customers' AS table_name, count(*) AS actual_rows FROM public.customers
     UNION ALL SELECT 'categories', count(*) FROM public.categories
@@ -41,7 +41,7 @@ FROM public.orders o
 WHERE o.status IN ('placed', 'completed')
   AND NOT EXISTS (SELECT 1 FROM public.order_items oi WHERE oi.order_id = o.order_id);
 
--- CHECK 5: implemented keys and checks; compare with the ERD/data dictionary.
+-- CHECK 5: implemented key and check definitions.
 SELECT c.relname AS table_name, con.conname AS constraint_name,
        pg_get_constraintdef(con.oid) AS definition
 FROM pg_constraint con

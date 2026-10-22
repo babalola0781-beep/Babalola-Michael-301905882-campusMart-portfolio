@@ -1,6 +1,6 @@
--- Run AFTER 01_schema.sql. All identities and customer details are fictional.
+-- Fictional seed dataset for the CampusMart schema.
 -- Expected counts: 6 customers, 4 categories, 10 products, 8 orders, 16 items.
--- Run once. No ON CONFLICT clause hides duplicates or failed assumptions.
+-- The guard prevents a repeated load into populated tables.
 BEGIN;
 
 DO $$
@@ -10,7 +10,7 @@ BEGIN
        OR EXISTS (SELECT 1 FROM public.products)
        OR EXISTS (SELECT 1 FROM public.orders)
        OR EXISTS (SELECT 1 FROM public.order_items) THEN
-        RAISE EXCEPTION 'Seed data requires all five tables to be empty. Do not delete existing work; use a fresh test database if needed.';
+        RAISE EXCEPTION 'Seed data requires all five tables to be empty.';
     END IF;
 END $$;
 

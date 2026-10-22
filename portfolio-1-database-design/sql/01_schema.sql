@@ -1,6 +1,5 @@
 -- PORTFOLIO 1 | CampusMart | PostgreSQL
--- Run once in a NEW, EMPTY database named campusmart_portfolio.
--- In pgAdmin, select the correct database, open this file, then Execute script.
+-- Schema definition for the campusmart_portfolio database.
 -- This script deliberately does not drop or overwrite existing tables.
 BEGIN;
 
