@@ -4,7 +4,19 @@
 **Academic session:** 2026/2027, First Semester  
 **Case study:** CampusMart, a simulated Nigerian online retail business
 
-This repository documents the database design, implementation and verification for CampusMart. Portfolio 1 contains the relational model, SQL scripts, normalisation analysis and seven screenshots from my PostgreSQL execution in pgAdmin 4.
+This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolio 1 contains the completed relational model, SQL scripts, normalisation analysis and seven screenshots from my PostgreSQL execution in pgAdmin 4.
+
+## Portfolio overview
+
+| Portfolio | Activity | Marks | Progress |
+|---|---|---:|---|
+| [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
+| [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Next activity |
+| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Planned |
+| [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
+| [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
+
+Final documentation and technical reflection carry a further 6 marks, bringing the assessment total to 40. The final LMS summary covers all five activities.
 
 ## Portfolio 1 Database Design and Modelling
 
@@ -27,4 +39,4 @@ The database contains 6 customers, 4 categories, 10 products, 8 orders and 16 or
 
 The database name and reported server version are `campusmart_portfolio` and PostgreSQL `18.6`, as shown in the server-version screenshot. All case-study records are fictional and monetary values are in Nigerian naira.
 
-This submission documents Portfolio 1. The course portfolio uses the same case study across its remaining activities.
+The completed implementation and evidence currently cover Portfolio 1. Portfolios 2 to 5 retain their own directories for the remaining assessment activities.
