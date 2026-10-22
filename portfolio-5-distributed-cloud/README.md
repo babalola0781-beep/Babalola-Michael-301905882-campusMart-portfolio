@@ -1,4 +1,5 @@
-# Portfolio 5 — Distributed and Cloud Database Exercise
+# Portfolio 5: Distributed and Cloud Database Exercise
 
-Status: **not started**. Reserved for CampusMart's distributed/cloud discussion or
-setup. Any proposed architecture will be distinguished from deployed systems.
+This activity covers distributed or cloud database design for CampusMart, including replication, sharding, availability, consistency or deployment evidence.
+
+[Portfolio overview](../README.md)
