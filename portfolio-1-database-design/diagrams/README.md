@@ -1,10 +1,5 @@
-# ER diagram
+# CampusMart Entity Relationship Diagram
 
-Open `campusmart-erd.png` or `campusmart-erd.pdf` to view. `campusmart-erd.svg` is
-a scalable vector version; `campusmart-erd.drawio` is editable in diagrams.net.
+The diagram shows the five implemented relations, their keys and relationship cardinalities. Each child has exactly one parent for each foreign key; each parent can have zero or many children. The zero lower bound on order items reflects the implemented schema, which permits an empty draft order.
 
-Every field shown exists in `sql/01_schema.sql`. PK,FK on the two ORDER_ITEMS
-identifiers means each is a foreign key and together they form the primary key.
-Each relationship connects exactly one parent to zero or many child rows.
-Draft orders may have no items; requiring items before placement is a later
-workflow rule, not a constraint secretly enforced by this diagram.
+[PNG](campusmart-erd.png) · [PDF](campusmart-erd.pdf) · [SVG](campusmart-erd.svg) · [Editable draw.io source](campusmart-erd.drawio)
