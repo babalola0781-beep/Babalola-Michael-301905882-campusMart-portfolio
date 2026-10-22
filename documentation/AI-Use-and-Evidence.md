@@ -1,29 +1,5 @@
-# AI-use declaration and evidence provenance
+# AI Use Declaration
 
-**Tool:** ChatGPT / Codex.
+I used ChatGPT/Codex to assist with interpreting the assessment, developing the CampusMart schema and fictional sample data, preparing the ER diagram, SQL, report and repository documentation, and checking the scripts in an embedded PostgreSQL environment. I then ran the database work in PostgreSQL using pgAdmin 4 and captured the seven screenshots included in this submission. My screenshots show the table structure, row counts, 12 passing constraint checks, server version, order values, historical price and unchanged counts after testing.
 
-**Assistance provided:** interpretation of the assessment; preparation of the
-CampusMart design, SQL and fictional sample data; production of the ER diagram,
-documentation and report; automated execution of the SQL and capture of results;
-and preparation of the GitHub repository files.
-
-**Verification performed by the assistant:** the schema and seed scripts were
-executed in PGlite 0.5.8, which reports PostgreSQL 18.3. Five table counts, eight
-order values, historical-price preservation, twelve constraint-rejection cases,
-unchanged counts after rollback, and the repeated-seed guard were checked.
-The evidence records the actual engine, timestamp and error messages.
-
-**Verification by the student:** the student reported generating at least one
-piece of evidence. That database evidence has not been supplied in this chat and
-cannot yet be checked or included. The three supplied images show a colleague's
-GitHub repository, technology table and folder list, not this database's execution.
-No claim is made that the assistant's outputs were captured on the student's PC.
-
-**Before submission:** the student must review and understand the implementation,
-run the scripts on their PostgreSQL installation, add their actual screenshots
-and describe what they personally reviewed, corrected and tested. Any additional
-course-specific restrictions on AI use remain applicable.
-
-**Use of a colleague's work:** the supplied images informed the organisation of
-the repository only. No colleague's SQL, results, screenshots or completion
-claims are presented as evidence for CampusMart.
+The earlier automated validation used PGlite 0.5.8 with embedded PostgreSQL 18.3. The desktop evidence reports PostgreSQL 18.6. These are separate executions. All customer and business records in the sample data are fictional.
