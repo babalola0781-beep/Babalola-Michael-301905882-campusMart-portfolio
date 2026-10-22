@@ -11,7 +11,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 | Portfolio | Activity | Marks | Progress |
 |---|---|---:|---|
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
-| [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Next activity |
+| [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | SQL and automated validation |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Planned |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
@@ -39,4 +39,8 @@ The database contains 6 customers, 4 categories, 10 products, 8 orders and 16 or
 
 The database name and reported server version are `campusmart_portfolio` and PostgreSQL `18.6`, as shown in the server-version screenshot. All case-study records are fictional and monetary values are in Nigerian naira.
 
-The completed implementation and evidence currently cover Portfolio 1. Portfolios 2 to 5 retain their own directories for the remaining assessment activities.
+## Portfolio 2 Query Processing and Optimisation
+
+Portfolio 2 contains [eight business queries and the indexing experiment](portfolio-2-query-optimisation/README.md), [performance analysis](portfolio-2-query-optimisation/performance-analysis.md), and [automated query outputs and execution plans](evidence/portfolio-2/README.md). The recorded measurements use PGlite 0.5.8 / PostgreSQL 18.3; desktop pgAdmin evidence for Portfolio 2 is not included in this revision.
+
+Portfolios 3, 4 and 5 retain their own directories for the remaining assessment activities.
