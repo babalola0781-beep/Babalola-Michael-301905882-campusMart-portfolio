@@ -1,16 +1,15 @@
-# Student screenshots
+# Portfolio 1 PostgreSQL screenshots
 
-Your own database screenshot was mentioned but has not been attached yet.
-The images supplied for comparison show a colleague's GitHub repository.
+I captured these seven screenshots from my PostgreSQL execution in pgAdmin 4. The database is `campusmart_portfolio`; the server-version query reports `18.6`.
 
-Add readable captures from your own PostgreSQL/pgAdmin session here:
+| Screenshot | Evidence | Observation |
+|---|---|---|
+| [01-database-tables.png](01-database-tables.png) | Five public tables | The object browser lists categories, customers, order_items, orders and products. |
+| [02-row-counts.png](02-row-counts.png) | Initial row counts | All five actual counts match the expected seed counts. |
+| [03-constraint-results.png](03-constraint-results.png) | Constraint checks | All 12 tests show PASS, with expected and actual SQLSTATE values. |
+| [04-server-version.png](04-server-version.png) | Database and server | campusmart_portfolio; server_version 18.6; pgAdmin 4 interface. |
+| [05-order-values.png](05-order-values.png) | Order values | Eight order values are displayed with customer names and order statuses. |
+| [06-historical-price.png](06-historical-price.png) | Historical price | CM-1005 / BK001: current price NGN 18,000; charged price NGN 16,000. |
+| [07-counts-after-checks.png](07-counts-after-checks.png) | Counts after testing | The same five counts remain after the constraint checks. |
 
-| Filename | What it should show |
-|---|---|
-| 01-database-tables.png | campusmart_portfolio and its five public tables |
-| 02-row-counts.png | CHECK 1 from 03_verify_data.sql, with five PASS rows |
-| 03-constraint-results.png | The twelve results from 04_constraint_checks.sql |
-
-If your existing evidence shows something else, retain its original content and
-describe exactly what it proves. Never rename a result to imply a different test.
-Keep passwords out of screenshots.
+The image contents are unchanged. The filenames use a consistent sequence for cross-referencing. Screenshot 01 shows the public table list; screenshots 02-07 show the database connection. The complete screenshot files retain the original capture resolution.
