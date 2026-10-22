@@ -2,8 +2,8 @@
 
 ## Starting problem
 
-Imagine storing order_reference, customer name/email, product1, quantity1,
-product2, quantity2 and a category name in one wide order table. The repeating
+An unnormalised order record containing order_reference, customer name/email, product1, quantity1,
+product2, quantity2 and a category name would place repeated data in one wide table. The repeating
 product columns limit how many items an order can hold. Repeating customer and
 category details creates opportunities for conflicting updates.
 
@@ -63,10 +63,3 @@ Computing them avoids keeping stored totals synchronised after an item changes.
 This is a deliberate redundancy-control decision, not proof of normalisation
 by itself. Stock is a stored current snapshot in this limited model; a full stock
 movement ledger is outside this stage.
-
-## Questions to answer in your own words
-
-1. Why does ORDER_ITEMS need both identifiers in its primary key?
-2. Why would keeping category_name in every product create an update problem?
-3. Why must an old order retain its charged price?
-4. Which business rule is only checked, not enforced, in this stage?

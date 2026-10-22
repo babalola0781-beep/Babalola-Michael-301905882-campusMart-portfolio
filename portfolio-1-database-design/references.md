@@ -1,23 +1,8 @@
-# References and sources
+# References
 
-Accessed 6 October 2026. The design and sample data are an original teaching
-example prepared with AI assistance; they are not a real organisation's records.
+1. Miva Open University. (2026). *MIT 8103 Advanced Database Systems: First Semester Continuous Assessment, 2026/2027 Academic Session*. School of Post Graduate Studies. Course assessment brief.
+2. PostgreSQL Global Development Group. (n.d.). *Constraints*. PostgreSQL 18 documentation. https://www.postgresql.org/docs/18/ddl-constraints.html
+3. pgAdmin Development Team. (n.d.). *Query Tool*. pgAdmin 4 documentation. https://www.pgadmin.org/docs/pgadmin4/latest/query_tool.html
+4. Electric. (n.d.). *PGlite documentation*. https://pglite.dev/docs/
 
-1. MIT 8103 Advanced Database Systems, 2026/2027 First Semester Continuous
-   Assessment, supplied document `Get hub .pdf`. Authority for the portfolio
-   components, evidence, private GitHub requirement and final LMS submission.
-2. PostgreSQL Global Development Group. Windows installers.
-   https://www.postgresql.org/download/windows/
-3. pgAdmin Development Team. pgAdmin 4 for Windows.
-   https://www.pgadmin.org/download/pgadmin-4-windows/
-4. pgAdmin Development Team. Query Tool documentation.
-   https://www.pgadmin.org/docs/pgadmin4/latest/query_tool.html
-5. PostgreSQL Global Development Group. Constraints.
-   https://www.postgresql.org/docs/current/ddl-constraints.html
-6. Electric. Getting started with PGlite. Used only for the assistant's embedded
-   PostgreSQL validation, not required on the student's computer.
-   https://pglite.dev/docs/
-
-Current documentation URLs can change over time; record your installed software
-versions alongside your own outputs. Explain concepts in your own words and
-acknowledge assistance in the final submission.
+The PostgreSQL and pgAdmin references were checked on 21 October 2026. PGlite was used for the supplementary automated validation recorded on 6 October 2026. The case study and sample records are fictional. Assistance is acknowledged in the [AI Use Declaration](../documentation/AI-Use-and-Evidence.md).
