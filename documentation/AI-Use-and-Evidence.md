@@ -1,7 +1,7 @@
 # AI Use Declaration
 
-I used ChatGPT/Codex to assist with interpreting the assessment, developing the CampusMart schema and fictional sample data, preparing the ER diagram, SQL, report and repository documentation, and checking the scripts in an embedded PostgreSQL environment. For Portfolio 1, I then ran the database work in PostgreSQL using pgAdmin 4 and captured the seven screenshots included in this submission. My screenshots show the table structure, row counts, 12 passing constraint checks, server version, order values, historical price and unchanged counts after testing.
+I used ChatGPT/Codex to assist with interpreting the assessment and preparing the CampusMart schema, fictional sample data, ER diagram, SQL and documentation. I verified the Portfolio 1 work by running the scripts in PostgreSQL 18.6 using pgAdmin 4. My seven screenshots record the tables, row counts, 12 passing constraint checks, server version, order values, historical price and unchanged counts after testing.
 
-The earlier automated validation used PGlite 0.5.8 with embedded PostgreSQL 18.3. The desktop evidence reports PostgreSQL 18.6. These are separate executions. All customer and business records in the sample data are fictional.
+All customer and business records in the sample data are fictional.
 
 For Portfolio 2, ChatGPT/Codex assisted with the business queries, benchmark scripts, performance analysis and automated validation. The included Portfolio 2 outputs were produced by automated execution in PGlite 0.5.8 / PostgreSQL 18.3. They verify query results, before/after result equality and preservation of the original tables. They are not presented as my desktop execution or screenshots.
