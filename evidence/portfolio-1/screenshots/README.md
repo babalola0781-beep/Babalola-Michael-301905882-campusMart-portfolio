@@ -11,5 +11,3 @@ I captured these seven screenshots from my PostgreSQL execution in pgAdmin 4. Th
 | [05-order-values.png](05-order-values.png) | Order values | Eight order values are displayed with customer names and order statuses. |
 | [06-historical-price.png](06-historical-price.png) | Historical price | CM-1005 / BK001: current price NGN 18,000; charged price NGN 16,000. |
 | [07-counts-after-checks.png](07-counts-after-checks.png) | Counts after testing | The same five counts remain after the constraint checks. |
-
-The image contents are unchanged. The filenames use a consistent sequence for cross-referencing. Screenshot 01 shows the public table list; screenshots 02-07 show the database connection. The complete screenshot files retain the original capture resolution.
