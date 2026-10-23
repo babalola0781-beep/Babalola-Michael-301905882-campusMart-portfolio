@@ -1,6 +1,0 @@
-table_name,actual_rows,expected_rows,result
-categories,4,4,PASS
-customers,6,6,PASS
-order_items,16,16,PASS
-orders,8,8,PASS
-products,10,10,PASS
