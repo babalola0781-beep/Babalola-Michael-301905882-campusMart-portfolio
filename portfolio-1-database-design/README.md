@@ -1,6 +1,6 @@
 # Portfolio 1 Database Design and Modelling
 
-CampusMart records customers, product categories, products, orders and order items. The implementation uses PostgreSQL and was executed in pgAdmin 4 against `campusmart_portfolio`.
+CampusMart records customers, product categories, products, orders and order items. The implementation uses PostgreSQL 18.6 and was executed in pgAdmin 4 against `campusmart_portfolio`.
 
 ## Design
 
