@@ -4,4 +4,4 @@ I used ChatGPT/Codex to assist with interpreting the assessment and preparing th
 
 All customer and business records in the sample data are fictional.
 
-For Portfolio 2, ChatGPT/Codex assisted with the business queries, benchmark scripts, performance analysis and automated validation. The included Portfolio 2 outputs were produced by automated execution in PGlite 0.5.8 / PostgreSQL 18.3. They verify query results, before/after result equality and preservation of the original tables. They are not presented as my desktop execution or screenshots.
+For Portfolio 2, ChatGPT/Codex assisted with the business queries, benchmark scripts and performance discussion. I ran the SQL in PostgreSQL 18.6 through pgAdmin 4 and captured 17 screenshots and 19 CSV exports. These record the query results, execution plans, repeated timings, index definition, matching phase digests and original table counts. The submitted performance figures are from that desktop execution.
