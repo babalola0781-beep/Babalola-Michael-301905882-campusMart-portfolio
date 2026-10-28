@@ -22,14 +22,14 @@ Final documentation and technical reflection carry a further 6 marks, bringing t
 
 | Submission material | File |
 |---|---|
-| Technical report | [PDF](documentation/Portfolio-1-Report.pdf) · [Word](documentation/Portfolio-1-Report.docx) · [Markdown](documentation/Portfolio-1-Report.md) |
+| Technical report | [PDF](portfolio-1-database-design/documentation/Portfolio-1-Report.pdf) · [Word](portfolio-1-database-design/documentation/Portfolio-1-Report.docx) · [Markdown](portfolio-1-database-design/documentation/Portfolio-1-Report.md) |
 | Implementation and results | [Portfolio 1](portfolio-1-database-design/README.md) |
 | Case study and business rules | [Case study](portfolio-1-database-design/case-study.md) |
 | Entity relationship diagram | [ER diagram](portfolio-1-database-design/diagrams/campusmart-erd.png) |
 | Relational schema | [Data dictionary](portfolio-1-database-design/data-dictionary.md) |
 | Functional dependencies | [Normalisation](portfolio-1-database-design/normalisation.md) |
 | Execution evidence | [Seven pgAdmin screenshots](evidence/portfolio-1/screenshots/README.md) |
-| Reflection | [Technical reflection](documentation/Technical-Reflection.md) |
+| Reflection | [Technical reflection](portfolio-1-database-design/documentation/Technical-Reflection.md) |
 | Sources | [References](portfolio-1-database-design/references.md) |
 | AI use | [Declaration](documentation/AI-Use-and-Evidence.md) |
 
