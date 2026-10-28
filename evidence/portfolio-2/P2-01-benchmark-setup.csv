@@ -1,2 +1,0 @@
-"database_name","server_version","benchmark_customers","benchmark_orders","original_customers","original_orders"
-"postgres","18.3","1000","20000","6","8"
