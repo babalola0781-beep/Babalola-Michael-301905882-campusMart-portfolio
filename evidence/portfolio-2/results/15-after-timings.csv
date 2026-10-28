@@ -1,0 +1,6 @@
+"phase","run_no","execution_ms","planning_ms","actual_rows","shared_hit_blocks","shared_read_blocks"
+"after",1,0.157,0.170,20,22,0
+"after",2,0.091,0.107,20,22,0
+"after",3,0.095,0.101,20,22,0
+"after",4,0.077,0.090,20,22,0
+"after",5,0.102,0.080,20,22,0

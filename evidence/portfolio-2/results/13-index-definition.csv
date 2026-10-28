@@ -1,0 +1,2 @@
+"indexname","indexdef"
+"idx_orders_customer_date","CREATE INDEX idx_orders_customer_date ON p2_benchmark.orders USING btree (customer_id, order_date DESC, order_id DESC)"
