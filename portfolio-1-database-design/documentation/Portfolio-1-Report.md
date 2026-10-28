@@ -28,7 +28,7 @@ I executed the schema, fictional seed data, verification queries and constraint 
 
 ## Entity relationship model
 
-![CampusMart ER diagram](../portfolio-1-database-design/diagrams/campusmart-erd.png)
+![CampusMart ER diagram](../diagrams/campusmart-erd.png)
 
 ### First normal form
 
@@ -71,13 +71,13 @@ Current catalogue price and historical charged price are different facts. Order 
 
 ## Evidence index
 
-- [01-database-tables.png](../evidence/portfolio-1/screenshots/01-database-tables.png): The object browser lists categories, customers, order_items, orders and products.
-- [02-row-counts.png](../evidence/portfolio-1/screenshots/02-row-counts.png): All five actual counts match the expected seed counts.
-- [03-constraint-results.png](../evidence/portfolio-1/screenshots/03-constraint-results.png): All 12 tests show PASS, with expected and actual SQLSTATE values.
-- [04-server-version.png](../evidence/portfolio-1/screenshots/04-server-version.png): campusmart_portfolio; server_version 18.6; pgAdmin 4 interface.
-- [05-order-values.png](../evidence/portfolio-1/screenshots/05-order-values.png): Eight order values are displayed with customer names and order statuses.
-- [06-historical-price.png](../evidence/portfolio-1/screenshots/06-historical-price.png): CM-1005 / BK001: current price NGN 18,000; charged price NGN 16,000.
-- [07-counts-after-checks.png](../evidence/portfolio-1/screenshots/07-counts-after-checks.png): The same five counts remain after the constraint checks.
+- [01-database-tables.png](../../evidence/portfolio-1/screenshots/01-database-tables.png): The object browser lists categories, customers, order_items, orders and products.
+- [02-row-counts.png](../../evidence/portfolio-1/screenshots/02-row-counts.png): All five actual counts match the expected seed counts.
+- [03-constraint-results.png](../../evidence/portfolio-1/screenshots/03-constraint-results.png): All 12 tests show PASS, with expected and actual SQLSTATE values.
+- [04-server-version.png](../../evidence/portfolio-1/screenshots/04-server-version.png): campusmart_portfolio; server_version 18.6; pgAdmin 4 interface.
+- [05-order-values.png](../../evidence/portfolio-1/screenshots/05-order-values.png): Eight order values are displayed with customer names and order statuses.
+- [06-historical-price.png](../../evidence/portfolio-1/screenshots/06-historical-price.png): CM-1005 / BK001: current price NGN 18,000; charged price NGN 16,000.
+- [07-counts-after-checks.png](../../evidence/portfolio-1/screenshots/07-counts-after-checks.png): The same five counts remain after the constraint checks.
 
 ## Order values
 
