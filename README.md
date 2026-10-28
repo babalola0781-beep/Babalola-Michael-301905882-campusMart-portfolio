@@ -4,14 +4,14 @@
 **Academic session:** 2026/2027, First Semester  
 **Case study:** CampusMart, a simulated Nigerian online retail business
 
-This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolio 1 contains the completed relational model, SQL scripts, normalisation analysis and seven screenshots from my PostgreSQL execution in pgAdmin 4.
+This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 and 2 contain the database design, SQL implementation, query optimisation analysis and evidence from my PostgreSQL 18.6 execution in pgAdmin 4.
 
 ## Portfolio overview
 
 | Portfolio | Activity | Marks | Progress |
 |---|---|---:|---|
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
-| [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | SQL and automated validation |
+| [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Planned |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
@@ -41,6 +41,6 @@ The database name and reported server version are `campusmart_portfolio` and Pos
 
 ## Portfolio 2 Query Processing and Optimisation
 
-Portfolio 2 contains [eight business queries and the indexing experiment](portfolio-2-query-optimisation/README.md), [performance analysis](portfolio-2-query-optimisation/performance-analysis.md), and [automated query outputs and execution plans](evidence/portfolio-2/README.md). The recorded measurements use PGlite 0.5.8 / PostgreSQL 18.3; desktop pgAdmin evidence for Portfolio 2 is not included in this revision.
+Portfolio 2 contains [eight business queries and the indexing experiment](portfolio-2-query-optimisation/README.md), [performance analysis](portfolio-2-query-optimisation/performance-analysis.md), and [17 desktop screenshots and 19 CSV exports](evidence/portfolio-2/README.md). The PostgreSQL 18.6 experiment changed the sequential scan to bitmap index and heap scans. Median execution time decreased from 1.630 ms to 0.095 ms, a 94.17% reduction across five recorded runs per phase. Matching phase digests and twenty rows in every run support result consistency.
 
 Portfolios 3, 4 and 5 retain their own directories for the remaining assessment activities.
