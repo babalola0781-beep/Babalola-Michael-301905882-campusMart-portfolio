@@ -40,4 +40,4 @@ For order CM-1005, product BK001 has a charged price of NGN 16,000 and a current
 
 The tables enforce valid parent references and field-level rules. They do not enforce a minimum number of items before an order is placed, or automatically couple order placement with stock deduction. The empty-order query detects violations of the intended rule; it does not prevent them. Stock is a current snapshot, and payment, delivery and refund processing are outside this design.
 
-[Technical report](../documentation/Portfolio-1-Report.pdf) · [Reflection](../documentation/Technical-Reflection.md) · [References](references.md)
+[Technical report](documentation/Portfolio-1-Report.pdf) · [Reflection](documentation/Technical-Reflection.md) · [References](references.md)
