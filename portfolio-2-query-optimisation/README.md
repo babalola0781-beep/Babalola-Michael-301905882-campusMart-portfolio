@@ -1,4 +1,4 @@
-# Portfolio 2: Query Processing and Optimisation
+# Portfolio 2 Query Processing and Optimisation
 
 **Case study:** CampusMart  
 **Student:** Michael Olayemi Babalola  
@@ -10,7 +10,7 @@ This activity implements eight business queries and compares a customer-order lo
 
 - [Technical analysis](performance-analysis.md)
 - [SQL scripts](sql/)
-- [Query outputs, execution plans and automated validation](../evidence/portfolio-2/README.md)
+- [Desktop screenshots, query outputs and execution plans](../evidence/portfolio-2/README.md)
 - [References](references.md)
 - [AI-use declaration](../documentation/AI-Use-and-Evidence.md)
 
@@ -33,6 +33,8 @@ Completed sales use `order_items.unit_price`, the price charged at purchase. Dra
 
 The lookup selects customer 125's orders, sorted by date and order ID descending. The index is `idx_orders_customer_date(customer_id, order_date DESC, order_id DESC)`. The experiment retains PostgreSQL's normal planner settings and uses `ANALYZE` statistics, text execution plans and five recorded `EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)` executions per phase after an unrecorded warm-up.
 
-Automated validation in PGlite 0.5.8 / PostgreSQL 18.3 confirmed all eight query outputs, 20 identical benchmark orders before and after indexing, and unchanged contents of all five original tables. Median execution time changed from 1.857 ms to 0.101 ms in that environment. These measurements describe the automated run; Portfolio 2 desktop pgAdmin evidence is not included in this revision.
+I executed the queries and indexing experiment in PostgreSQL 18.6 using pgAdmin 4. The submitted desktop evidence includes 17 screenshots and 19 CSV exports. The sequential scan changed to a bitmap index scan and bitmap heap scan, with a sort in both plans. Median execution time fell from **1.630 ms to 0.095 ms**, a **94.17% reduction** across five recorded runs per phase.
+
+The result checks show matching phase digests, twenty rows in every measured run and unchanged original table counts. The performance analysis discusses the warm-cache, single-query experiment and the index's storage and write costs.
 
 [Portfolio overview](../README.md)
