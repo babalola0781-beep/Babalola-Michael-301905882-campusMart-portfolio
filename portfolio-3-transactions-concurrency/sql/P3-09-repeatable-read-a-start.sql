@@ -1,0 +1,8 @@
+COMMIT;
+BEGIN ISOLATION LEVEL REPEATABLE READ;
+
+SELECT 'rr_first_read' AS phase, pg_backend_pid() AS session_pid,
+       current_setting('transaction_isolation') AS isolation_level,
+       transaction_timestamp() AS transaction_started,
+       sku, stock_quantity
+FROM p3_lab.products WHERE sku = 'AC002';
