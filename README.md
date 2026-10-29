@@ -12,7 +12,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 |---|---|---:|---|
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
-| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Planned |
+| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Implementation prepared |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
 
@@ -43,4 +43,8 @@ The database name and reported server version are `campusmart_portfolio` and Pos
 
 Portfolio 2 contains [eight business queries and the indexing experiment](portfolio-2-query-optimisation/README.md), [performance analysis](portfolio-2-query-optimisation/performance-analysis.md), and [17 desktop screenshots and 19 CSV exports](evidence/portfolio-2/README.md). The PostgreSQL 18.6 experiment changed the sequential scan to bitmap index and heap scans. Median execution time decreased from 1.630 ms to 0.095 ms, a 94.17% reduction across five recorded runs per phase. Matching phase digests and twenty rows in every run support result consistency.
 
-Portfolios 3, 4 and 5 retain their own directories for the remaining assessment activities.
+## Portfolio 3 Transactions and Concurrency
+
+Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md) and the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md). It covers commit, rollback, Read Committed, Repeatable Read and row locking in a separate CampusMart schema. Desktop execution evidence is pending.
+
+Portfolios 4 and 5 retain their own directories for the remaining assessment activities.
