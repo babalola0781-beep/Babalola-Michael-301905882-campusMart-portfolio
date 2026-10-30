@@ -1,0 +1,2 @@
+"session_a_pid","session_b_pid","session_b_state","wait_event_type","wait_event","blocking_pids","blocked_by_session_a"
+18460,25544,"active","Lock","transactionid","{18460}",True

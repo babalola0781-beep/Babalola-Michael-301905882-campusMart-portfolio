@@ -1,0 +1,2 @@
+"phase","session_pid","isolation_level","transaction_started","sku","stock_quantity"
+"rr_first_read",18460,"repeatable read","2026-10-30 14:35:00.04921+01","AC002",35
