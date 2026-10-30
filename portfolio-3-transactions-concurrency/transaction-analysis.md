@@ -12,10 +12,10 @@ The committed `CM-P3-COMMIT` order bought two EL002 units. After COMMIT, the out
 
 | Rollback observation | PID | EL002 stock | Temporary orders | Temporary items |
 |---|---:|---:|---:|---:|
-| Before ROLLBACK | 1140 | 35 | 1 | 1 |
-| Output labelled after ROLLBACK | 18460 | 38 | 0 | 0 |
+| Before ROLLBACK | 18460 | 35 | 1 | 1 |
+| After ROLLBACK | 18460 | 38 | 0 | 0 |
 
-These values are consistent with the intended rollback outcome, but the change of PID limits the conclusion. A new connection can see stock 38 and no temporary order while the original connection still has uncommitted changes. A ROLLBACK executed in the new connection cannot cancel the original connection's transaction. The submitted pair therefore establishes the two visible states, but does not establish that an explicit ROLLBACK ended the transaction in PID 1140. The later final-state check has the same visibility limitation and is not independent proof of that transaction boundary.
+Both rollback captures use PID 18460. The before capture shows EL002 stock 35 with one temporary order and item. The after capture shows the explicit ROLLBACK statement and, in the same PID, stock 38 with no temporary order or item. The matching connection identity and rollback command establish that the transaction's temporary changes were reversed.
 
 ## Isolation comparison
 
@@ -38,11 +38,11 @@ The implementation holds the product row lock until the surrounding transaction 
 
 All 15 checks in `19-final-checks.csv` returned PASS. The lab ended with ten visible orders and eighteen visible line items. Product stocks were EL001 = 3, EL002 = 38, EL003 = 24 and AC002 = 34. All five original-table row-count and ordered-row-fingerprint comparisons matched their setup baselines.
 
-These checks validate the queried state and support preservation of the original tables. They do not prove that every intended transaction boundary was exercised correctly. In particular, the rollback PID mismatch remains unresolved by a matching final stock value.
+These checks validate the queried state and support preservation of the original tables. They complement the rollback pair: the matching PID and explicit ROLLBACK statement show that the temporary changes were reversed in that connection.
 
 The experiment uses two connections, a small fictional dataset and one product per order. It does not measure throughput under many customers, multi-product deadlocks, crash recovery or distributed transactions. The locking test demonstrates one controlled waiting and rejection sequence, not reliability under every concurrent schedule.
 
-The main lesson is that result values need connection and transaction context. Matching PIDs and transaction start times support the isolation comparisons, while the changed PID weakens the rollback demonstration. The stock test also shows the trade-off in holding a lock: the second request waits, but its eventual decision uses stock remaining after the first purchase.
+The main lesson is that result values need connection and transaction context. Matching PIDs and transaction start times support the isolation comparisons; in the rollback test, the matching PID and visible ROLLBACK statement link the before and after results. The stock test also shows the trade-off in holding a lock: the second request waits, but its eventual decision uses stock remaining after the first purchase.
 
 ## References
 
