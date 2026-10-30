@@ -12,7 +12,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 |---|---|---:|---|
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
-| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Evidence recorded; rollback verification limited |
+| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Complete |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
 
@@ -45,6 +45,6 @@ Portfolio 2 contains [eight business queries and the indexing experiment](portfo
 
 ## Portfolio 3 Transactions and Concurrency
 
-Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md), the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md), [transaction analysis](portfolio-3-transactions-concurrency/transaction-analysis.md), and [19 desktop screenshots and 19 CSV exports](evidence/portfolio-3/README.md). The evidence records a committed order, contrasting Read Committed and Repeatable Read observations, and a blocked stock request that is rejected after the first purchase commits. All 15 final-state checks pass. The rollback observations use different session PIDs, so they do not yet verify an explicit rollback in the original connection.
+Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md), the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md), [transaction analysis](portfolio-3-transactions-concurrency/transaction-analysis.md), and [19 desktop screenshots and 19 CSV exports](evidence/portfolio-3/README.md). The evidence records a committed order, contrasting Read Committed and Repeatable Read observations, and a blocked stock request that is rejected after the first purchase commits. All 15 final-state checks pass. The rollback captures use PID 18460 in both results: EL002 stock was 35 with one temporary order and item before ROLLBACK, then 38 with neither temporary row afterward.
 
 Portfolios 4 and 5 retain their own directories for the remaining assessment activities.
