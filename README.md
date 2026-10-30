@@ -4,7 +4,7 @@
 **Academic session:** 2026/2027, First Semester  
 **Case study:** CampusMart, a simulated Nigerian online retail business
 
-This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 and 2 contain the database design, SQL implementation, query optimisation analysis and evidence from my PostgreSQL 18.6 execution in pgAdmin 4.
+This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 to 3 contain database design, SQL implementation, query optimisation and transaction analysis, with evidence from my PostgreSQL 18.6 execution in pgAdmin 4.
 
 ## Portfolio overview
 
@@ -12,7 +12,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 |---|---|---:|---|
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
-| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Implementation prepared |
+| [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Evidence recorded; rollback verification limited |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
 
@@ -45,6 +45,6 @@ Portfolio 2 contains [eight business queries and the indexing experiment](portfo
 
 ## Portfolio 3 Transactions and Concurrency
 
-Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md) and the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md). It covers commit, rollback, Read Committed, Repeatable Read and row locking in a separate CampusMart schema. Desktop execution evidence is pending.
+Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md), the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md), [transaction analysis](portfolio-3-transactions-concurrency/transaction-analysis.md), and [19 desktop screenshots and 19 CSV exports](evidence/portfolio-3/README.md). The evidence records a committed order, contrasting Read Committed and Repeatable Read observations, and a blocked stock request that is rejected after the first purchase commits. All 15 final-state checks pass. The rollback observations use different session PIDs, so they do not yet verify an explicit rollback in the original connection.
 
 Portfolios 4 and 5 retain their own directories for the remaining assessment activities.
