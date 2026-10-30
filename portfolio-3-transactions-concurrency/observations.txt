@@ -1,7 +1,7 @@
 Portfolio 3 observations
 
 1. COMMIT and ROLLBACK
-After COMMIT, the order and its line item remained, and EL002 stock was 38. The before-rollback output showed stock 35 with one temporary order and item, while the after-rollback output showed stock 38 with neither visible. However, the two outputs used different sessions (1140 and 18460), so they do not establish that an explicit ROLLBACK cancelled the original transaction.
+After COMMIT, the order and its line item remained, and EL002 stock was 38. In PID 18460, the before-rollback output showed stock 35 with one temporary order and item. After the explicit ROLLBACK, the same PID showed stock 38 with neither temporary row.
 
 2. Isolation levels
 Under Read Committed, Session A read EL003 stock as 25, then 24 after Session B committed its update. Under Repeatable Read, A read AC002 stock as 35 both before and after B changed it to 34. After A ended that transaction, a new read returned 34. Each before/after isolation pair retained the same reader PID and transaction start time.
@@ -10,4 +10,4 @@ Under Read Committed, Session A read EL003 stock as 25, then 24 after Session B 
 Session B (25544) waited for Session A (18460), as shown by the Lock wait and the blocking PID. A's seven-unit request reduced EL001 stock from 10 to 3. When A committed, B's five-unit request was rejected for insufficient stock, leaving the stock at 3 and creating no second order.
 
 4. Limitation
-The experiment used a small dataset and two connections, so it does not establish performance or reliability under many simultaneous customers. It also shows why session identifiers matter: matching stock values alone do not prove that a transaction boundary was tested in the same connection.
+The experiment used a small dataset and two connections, so it does not establish performance or reliability under many simultaneous customers. It also shows why session identifiers matter: PID 18460 and the explicit ROLLBACK statement confirm that the before and after results belong to the same connection and that its temporary changes were reversed.
