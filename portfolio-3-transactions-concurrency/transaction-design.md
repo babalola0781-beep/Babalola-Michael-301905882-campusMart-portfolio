@@ -24,7 +24,7 @@ The row-lock case uses product EL001 with an initial copied stock of ten. Sessio
 
 The observer query in A uses `pg_blocking_pids` and `pg_stat_activity` to expose B's wait and identify A as a blocker [4]. After A commits, B's Read Committed locking read obtains the updated row. The function then evaluates the available stock and can reject the second request without creating its order. The 180-second lock timeout bounds an accidentally abandoned wait; an idle transaction is limited to fifteen minutes.
 
-The numeric starting values define the experimental inputs and expected comparisons. They are not a record of desktop execution. The SQL result grids and screenshots provide that record.
+The [transaction analysis](transaction-analysis.md) compares this design with the recorded desktop outputs, including the observed lock wait, stock rejection and limitation in the rollback evidence.
 
 ## Trade-offs and limitations
 

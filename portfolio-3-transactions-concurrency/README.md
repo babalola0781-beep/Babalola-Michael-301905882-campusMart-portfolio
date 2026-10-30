@@ -4,30 +4,31 @@
 **Student:** Michael Olayemi Babalola  
 **Course:** MIT 8103 Advanced Database Systems
 
-The implementation covers order placement and stock control using explicit transactions, two isolation levels and row locking. A separate `p3_lab` schema contains copies of the five CampusMart tables. The original `public` tables and the Portfolio 2 benchmark are outside the experiment's write operations.
+This portfolio examines order placement and stock control using explicit transactions, Read Committed, Repeatable Read and row locking. The desktop evidence was captured in pgAdmin 4 against PostgreSQL 18.6 on 30 October 2026. A separate `p3_lab` schema contains copies of the five CampusMart tables.
 
-## Implementation
+## Submission material
 
-| Component | Purpose |
+| Material | File |
 |---|---|
-| [SQL scripts](sql/) | Session identification, isolated schema, transaction examples, isolation comparisons and locking checks |
-| [Transaction design](transaction-design.md) | Atomic order placement, snapshot behaviour, concurrency control and limitations |
-| [References](references.md) | Assessment and PostgreSQL sources |
-| [AI-use declaration](../documentation/AI-Use-and-Evidence.md) | Assistance acknowledged across the portfolio |
+| Implementation | [Transaction and concurrency SQL](sql/) |
+| Design and trade-offs | [Transaction design](transaction-design.md) |
+| Results and interpretation | [Transaction analysis](transaction-analysis.md) |
+| Short observations | [Observations](observations.txt) |
+| Desktop evidence | [19 screenshots and 19 CSV exports](../evidence/portfolio-3/README.md) |
+| Sources | [References](references.md) |
+| AI use | [Declaration](../documentation/AI-Use-and-Evidence.md) |
 
-`p3_lab.place_order` locks the selected product with `SELECT ... FOR UPDATE`, checks the remaining stock, and creates an order and item together with the stock deduction. Insufficient stock produces a rejection result without creating an order. The surrounding transaction determines whether an accepted change is committed or rolled back.
+## Recorded results
 
-## Experimental cases
+| Case | Observation |
+|---|---|
+| COMMIT | The order and item remained; EL002 stock was 38. |
+| ROLLBACK | The before output showed stock 35 and one temporary order and item; the later output showed stock 38 and neither row. The session PID changed from 1140 to 18460, so this pair does not verify an explicit rollback in the original connection. |
+| Read Committed | A read EL003 stock as 25 and then 24 after B's committed update, within the same reader transaction. |
+| Repeatable Read | A read AC002 stock as 35 twice, although B committed 34. A new transaction then read 34. |
+| Row locking | B (25544) waited for A (18460). A bought seven of ten EL001 units. B's request for five was rejected after A committed, leaving three units and no B order. |
+| Final state | All 15 state checks returned PASS, including the original-table count and fingerprint comparisons. |
 
-| Case | SQL files | Verification criterion |
-|---|---|---|
-| Commit | P3-02 | Order, item and stock deduction persist after COMMIT |
-| Rollback | P3-03 to P3-04 | The temporary order and item disappear and stock returns to its preceding value |
-| Read Committed | P3-06 to P3-08 | Two reads in one transaction can observe a committed update from the other session |
-| Repeatable Read | P3-09 to P3-12 | The same transaction retains its snapshot; a read after COMMIT sees the newer value |
-| Row locking | P3-13 to P3-17 | The competing request waits, then checks stock after the first transaction commits |
-| Integrity | P3-18 | Scenario invariants and original-table row counts and fingerprints match their comparisons |
-
-The SQL exposes session PIDs, isolation levels, transaction start times, blocking relationships and final state. These identify the transactions involved and distinguish a live lock wait from a connection or execution error. Runtime evidence is recorded separately from the implementation design.
+The results support the commit, isolation and locking demonstrations. Rollback verification is limited by the change of connection between its two observations; passing final-state checks do not resolve that transaction-boundary gap.
 
 [Portfolio overview](../README.md)
