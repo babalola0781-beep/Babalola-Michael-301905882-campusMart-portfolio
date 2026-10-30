@@ -13,7 +13,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Complete |
-| [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Planned |
+| [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | In progress |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
 
 Final documentation and technical reflection carry a further 6 marks, bringing the assessment total to 40. The final LMS summary covers all five activities.
