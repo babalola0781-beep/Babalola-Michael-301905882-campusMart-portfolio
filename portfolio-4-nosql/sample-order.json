@@ -1,0 +1,38 @@
+{
+  "_id": "CM-1005",
+  "orderReference": "CM-1005",
+  "orderDate": {
+    "$date": "2026-10-04T10:00:00.000Z"
+  },
+  "status": "completed",
+  "customer": {
+    "email": "amina@example.test",
+    "fullName": "Amina Yusuf"
+  },
+  "items": [
+    {
+      "sku": "CL002",
+      "productName": "Campus Hoodie",
+      "category": "Clothing",
+      "quantity": 1,
+      "unitPrice": {
+        "$numberDecimal": "18000.00"
+      }
+    },
+    {
+      "sku": "BK001",
+      "productName": "Database Systems Textbook",
+      "category": "Books",
+      "quantity": 1,
+      "unitPrice": {
+        "$numberDecimal": "16000.00"
+      }
+    }
+  ],
+  "total": {
+    "currency": "NGN",
+    "amount": {
+      "$numberDecimal": "34000.00"
+    }
+  }
+}

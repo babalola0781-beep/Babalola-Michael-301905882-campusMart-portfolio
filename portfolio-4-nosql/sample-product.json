@@ -1,0 +1,10 @@
+{
+  "_id": "BK001",
+  "sku": "BK001",
+  "name": "Database Systems Textbook",
+  "category": "Books",
+  "currentPrice": {
+    "$numberDecimal": "18000.00"
+  },
+  "stockQuantity": 20
+}
