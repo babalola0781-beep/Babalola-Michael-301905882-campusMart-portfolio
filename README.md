@@ -14,7 +14,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Complete |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Complete |
-| [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
+| [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | In progress |
 
 Final documentation and technical reflection carry a further 6 marks, bringing the assessment total to 40. The final LMS summary covers all five activities.
 
@@ -51,4 +51,6 @@ Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-
 
 Portfolio 4 implements the CampusMart document model in MongoDB with separate `products` and `orders` collections and embedded customer and line-item snapshots. The [implementation and model explanation](portfolio-4-nosql/README.md) are supported by the [MongoDB execution evidence](evidence/portfolio-4/README.md).
 
-Portfolio 5 remains planned.
+## Portfolio 5 Distributed and Cloud Database Exercise
+
+Portfolio 5 applies a three-member local MongoDB replica set to CampusMart. The [technical design and scripts](portfolio-5-distributed-cloud/README.md) cover replication, majority reads and writes, and primary election behavior. All three members run on one computer, so this is a teaching exercise rather than a multi-host production deployment.
