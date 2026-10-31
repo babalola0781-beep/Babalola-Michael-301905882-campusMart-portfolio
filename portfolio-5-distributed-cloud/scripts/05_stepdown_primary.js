@@ -6,11 +6,11 @@ if (!member.isWritablePrimary) {
   quit(2);
 }
 
-print("Requesting a planned primary step-down for 30 seconds.");
+print("Requesting a planned primary step-down for 180 seconds.");
 print("A brief election and write pause may follow.");
 printjson(
   db.adminCommand({
-    replSetStepDown: 30,
+    replSetStepDown: 180,
     secondaryCatchUpPeriodSecs: 10
   })
 );
