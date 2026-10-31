@@ -4,7 +4,7 @@
 **Academic session:** 2026/2027, First Semester  
 **Case study:** CampusMart, a simulated Nigerian online retail business
 
-This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 to 3 contain database design, SQL implementation, query optimisation and transaction analysis, with evidence from my PostgreSQL 18.6 execution in pgAdmin 4.
+This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 to 3 cover database design, SQL implementation, query optimisation and transaction analysis, with evidence from my PostgreSQL 18.6 execution in pgAdmin 4. Portfolio 4 documents a MongoDB NoSQL model with its implementation and execution evidence.
 
 ## Portfolio overview
 
@@ -13,7 +13,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 | [Portfolio 1](portfolio-1-database-design/) | Database Design and Modelling | 7 | Complete |
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Complete |
-| [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | In progress |
+| [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Complete |
 | [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Planned |
 
 Final documentation and technical reflection carry a further 6 marks, bringing the assessment total to 40. The final LMS summary covers all five activities.
@@ -47,4 +47,8 @@ Portfolio 2 contains [eight business queries and the indexing experiment](portfo
 
 Portfolio 3 contains [transaction and concurrency SQL](portfolio-3-transactions-concurrency/README.md), the [implementation design](portfolio-3-transactions-concurrency/transaction-design.md), [transaction analysis](portfolio-3-transactions-concurrency/transaction-analysis.md), and [19 desktop screenshots and 19 CSV exports](evidence/portfolio-3/README.md). The evidence records a committed order, contrasting Read Committed and Repeatable Read observations, and a blocked stock request that is rejected after the first purchase commits. All 15 final-state checks pass. The rollback captures use PID 18460 in both results: EL002 stock was 35 with one temporary order and item before ROLLBACK, then 38 with neither temporary row afterward.
 
-Portfolios 4 and 5 retain their own directories for the remaining assessment activities.
+## Portfolio 4 NoSQL and Advanced Data Models
+
+Portfolio 4 implements the CampusMart document model in MongoDB with separate `products` and `orders` collections and embedded customer and line-item snapshots. The [implementation and model explanation](portfolio-4-nosql/README.md) are supported by the [MongoDB execution evidence](evidence/portfolio-4/README.md).
+
+Portfolio 5 remains planned.

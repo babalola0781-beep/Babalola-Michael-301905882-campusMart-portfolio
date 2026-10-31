@@ -29,6 +29,10 @@ Embedding the line items makes the complete order available from one document re
 | sample-order.json | Example of an order document with embedded customer and line-item snapshots. |
 | references.md | Course brief and MongoDB documentation used for the model. |
 
+## Run evidence
+
+The [Portfolio 4 evidence index](../evidence/portfolio-4/README.md) links to the screenshots and saved text output for the seed summary, order lookup, low-stock query, and completed-sales aggregation.
+
 ## Suitability and trade-offs
 
 Orders are a useful document boundary because an order and its line items are normally read together. The embedded customer and item snapshots reduce cross-collection lookups and keep the purchase-time information with the order. The separate product collection remains the source for current stock and current prices. The category and stock index supports the low-stock lookup, while the customer email and order date index supports customer order history.
@@ -37,4 +41,4 @@ The model intentionally duplicates customer and product descriptions in an order
 
 ## AI-use declaration
 
-Generative AI assistance was used to draft the NoSQL model, MongoDB scripts, and technical explanation. The student remains responsible for reviewing the submitted work and understanding its implementation.
+ChatGPT assisted with the MongoDB model, scripts, and technical explanation. I ran the scripts using MongoDB 9.0.4, reviewed the saved output and screenshots, and corrected the PowerShell output-capture syntax after the first command failed. I remain responsible for understanding and verifying the submitted work. The portfolio-wide declaration is in [documentation/AI-Use-and-Evidence.md](../documentation/AI-Use-and-Evidence.md).
