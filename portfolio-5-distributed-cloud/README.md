@@ -36,5 +36,3 @@ The lab uses localhost only and a separate `campusmart_p5` database. It does not
 | scripts/04_secondary_read.js | Reads the order from a secondary using majority read concern. |
 | scripts/05_stepdown_primary.js | Requests a controlled step-down of the current primary. |
 | references.md | Course brief and MongoDB documentation used for this activity. |
-
-Execution evidence will be added after the scripts are run and their actual output is reviewed.
