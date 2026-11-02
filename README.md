@@ -22,7 +22,7 @@ Final documentation and technical reflection carry a further 6 marks, bringing t
 
 | Submission material | File |
 |---|---|
-| Technical report | [PDF](Babalola_Michael_portfolio-1-database-design/documentation/Babalola_Michael_Portfolio-1-Report.pdf) · [Word](Babalola_Michael_portfolio-1-database-design/documentation/Babalola_Michael_Portfolio-1-Report.docx) · [Markdown](Babalola_Michael_portfolio-1-database-design/documentation/Babalola_Michael_Portfolio-1-Report.md) |
+| Technical report | [Markdown](Babalola_Michael_portfolio-1-database-design/documentation/Babalola_Michael_Portfolio-1-Report.md) |
 | Implementation and results | [Portfolio 1](Babalola_Michael_portfolio-1-database-design/Babalola_Michael_README.md) |
 | Case study and business rules | [Case study](Babalola_Michael_portfolio-1-database-design/Babalola_Michael_case-study.md) |
 | Entity relationship diagram | [ER diagram](Babalola_Michael_portfolio-1-database-design/diagrams/Babalola_Michael_campusmart-erd.png) |
