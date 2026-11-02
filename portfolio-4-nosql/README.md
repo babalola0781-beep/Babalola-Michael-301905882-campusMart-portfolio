@@ -38,7 +38,3 @@ The [Portfolio 4 evidence index](../evidence/portfolio-4/README.md) links to the
 Orders are a useful document boundary because an order and its line items are normally read together. The embedded customer and item snapshots reduce cross-collection lookups and keep the purchase-time information with the order. The separate product collection remains the source for current stock and current prices. The category and stock index supports the low-stock lookup, while the customer email and order date index supports customer order history.
 
 The model intentionally duplicates customer and product descriptions in an order. That preserves the historical order view, but current profile or catalogue changes do not update those snapshots. Very large or independently queried histories may be better represented with references or a separate event collection. This small teaching dataset does not measure production-scale performance.
-
-## AI-use declaration
-
-ChatGPT assisted with the MongoDB model, scripts, and technical explanation. I ran the scripts using MongoDB 9.0.4, reviewed the saved output and screenshots, and corrected the PowerShell output-capture syntax after the first command failed. I remain responsible for understanding and verifying the submitted work. The portfolio-wide declaration is in [documentation/AI-Use-and-Evidence.md](../documentation/AI-Use-and-Evidence.md).
