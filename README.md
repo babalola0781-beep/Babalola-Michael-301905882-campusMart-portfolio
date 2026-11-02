@@ -4,7 +4,7 @@
 **Academic session:** 2026/2027, First Semester  
 **Case study:** CampusMart, a simulated Nigerian online retail business
 
-This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 to 3 cover database design, SQL implementation, query optimisation and transaction analysis, with evidence from my PostgreSQL 18.6 execution in pgAdmin 4. Portfolio 4 documents a MongoDB NoSQL model with its implementation and execution evidence.
+This repository contains the five MIT 8103 portfolio activities using CampusMart as a consistent case study. Portfolios 1 to 3 cover database design, SQL implementation, query optimisation and transaction analysis, with evidence from my PostgreSQL 18.6 execution in pgAdmin 4. Portfolio 4 documents a MongoDB NoSQL model, and Portfolio 5 records a distributed MongoDB replica-set exercise, with their implementation and execution evidence.
 
 ## Portfolio overview
 
@@ -14,7 +14,7 @@ This repository contains the five MIT 8103 portfolio activities using CampusMart
 | [Portfolio 2](portfolio-2-query-optimisation/) | Query Processing and Optimisation | 7 | Complete |
 | [Portfolio 3](portfolio-3-transactions-concurrency/) | Transactions and Concurrency | 7 | Complete |
 | [Portfolio 4](portfolio-4-nosql/) | NoSQL and Advanced Data Models | 7 | Complete |
-| [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | In progress |
+| [Portfolio 5](portfolio-5-distributed-cloud/) | Distributed and Cloud Database Exercise | 6 | Complete |
 
 Final documentation and technical reflection carry a further 6 marks, bringing the assessment total to 40. The final LMS summary covers all five activities.
 
@@ -53,4 +53,4 @@ Portfolio 4 implements the CampusMart document model in MongoDB with separate `p
 
 ## Portfolio 5 Distributed and Cloud Database Exercise
 
-Portfolio 5 applies a three-member local MongoDB replica set to CampusMart. The [technical design and scripts](portfolio-5-distributed-cloud/README.md) cover replication, majority reads and writes, and primary election behavior. All three members run on one computer, so this is a teaching exercise rather than a multi-host production deployment.
+Portfolio 5 applies a three-member local MongoDB replica set to CampusMart. The [technical design and scripts](portfolio-5-distributed-cloud/README.md), [execution evidence](evidence/portfolio-5/README.md), and [technical reflection](portfolio-5-distributed-cloud/technical-reflection.md) record replication, a majority write and secondary read, and a primary election. Before step-down, 27101 was PRIMARY; after the corrected step-down, 27102 was PRIMARY and all three members reported health 1. The members ran on one computer, so this demonstrates replica-set behavior but not recovery from a computer failure.

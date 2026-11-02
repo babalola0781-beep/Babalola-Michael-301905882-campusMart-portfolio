@@ -26,6 +26,12 @@ The lab uses localhost only and a separate `campusmart_p5` database. It does not
 
 **Sharding and cloud deployment:** sharding is not implemented because the CampusMart teaching dataset is small. If the order workload grew, a hashed customer email shard key could distribute customer-specific order histories, while global sales reports would need to read across shards. A production cloud deployment would place replica-set members in separate failure zones, with authentication, TLS, backups, monitoring, and appropriate network controls. No Atlas or other public cloud deployment is claimed here.
 
+## Captured execution and reflection
+
+The [execution evidence](../evidence/portfolio-5/README.md) records the actual MongoDB 9.0.4 run. Before step-down, member 27101 was PRIMARY. The majority write created order `P5-CM-1005` for NGN 16,000, and a majority read from secondary 27102 returned the same order. After the corrected 180-second step-down, member 27102 was PRIMARY and all three members reported health 1.
+
+The [technical reflection](technical-reflection.md) answers the prompts using these saved results. The initial 30-second step-down screenshot and the final 180-second output are identified separately in the evidence index.
+
 ## Implementation files
 
 | File | Purpose |
