@@ -106,7 +106,7 @@ These checks establish the tested integrity rules. They do not establish a compl
 
 ## AI use declaration
 
-I used ChatGPT/Codex to assist with interpreting the assessment and preparing the CampusMart schema, fictional sample data, ER diagram, SQL and documentation. I verified the Portfolio 1 work by running the scripts in PostgreSQL 18.6 using pgAdmin 4. My seven screenshots record the tables, row counts, 12 passing constraint checks, server version, order values, historical price and unchanged counts after testing.
+I used ChatGPT to assist with interpreting the assessment. I prepared the CampusMart schema, fictional sample data, ER diagram, SQL and documentation. I also verified the Portfolio 1 work by running the scripts in PostgreSQL 18.6 using pgAdmin 4. My seven screenshots record the tables, row counts, 12 passing constraint checks, server version, order values, historical price and unchanged counts after testing.
 
 ## References
 
