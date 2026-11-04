@@ -35,7 +35,9 @@ The [Portfolio 4 evidence index](../evidence/Babalola_Michael_portfolio-4/Babalo
 
 ## Suitability and trade-offs
 
-Orders are a useful document boundary because an order and its line items are normally read together. The embedded customer and item snapshots reduce cross-collection lookups and keep the purchase-time information with the order. The separate product collection remains the source for current stock and current prices. The category and stock index supports the low-stock lookup, while the customer email and order date index supports customer order history.
+Orders are a useful document boundary because an order and its line items are normally read together. The embedded customer and item snapshots reduce cross-collection lookups and keep the purchase-time information with the order. The separate product collection remains the source for current stock and current prices. The customer email and order date index supports customer order history.
+
+The `{ category: 1, stockQuantity: 1 }` index is suited to stock queries within a specified category. The submitted low-stock query filters only by `stockQuantity` and sorts by `stockQuantity` and `_id`; this index does not provide that sort order. The saved query results establish which products matched, but do not demonstrate an indexing benefit.
 
 The model intentionally duplicates customer and product descriptions in an order. That preserves the historical order view, but current profile or catalogue changes do not update those snapshots. Very large or independently queried histories may be better represented with references or a separate event collection. This small teaching dataset does not measure production-scale performance.
 
